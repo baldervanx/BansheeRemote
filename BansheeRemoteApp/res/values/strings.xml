@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, BansheeRemote</string>
     <string name="app_name">BansheeRemote</string>
+    <string name="error_db">Something went wrong. Make sure the banshee database file is on your sd-card.</string>
+    <string name="title_artists">Artists</string>
+    <string name="title_albums">Albums</string>
+    <string name="title_tracks">Tracks</string>
+    <string name="shuffle_off">Shuffle mode off</string>
+    <string name="shuffle_track">Shuffle mode by track</string>
+    <string name="shuffle_artist">Shuffle mode by artist</string>
+    <string name="shuffle_album">Shuffle mode by album</string>
+    <string name="shuffle_score">Shuffle mode by score</string>
+    <string name="shuffle_rating">Shuffle mode by rating</string>
+    <string name="repeat_off">Repeat mode off</string>
+    <string name="repeat_single">Repeat mode single</string>
+    <string name="repeat_all">Repeat mode all</string>
+    <string name="error_serverconnection">Can\'t connect to Server. Check your settings.</string>
 </resources>

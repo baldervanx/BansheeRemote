@@ -1,20 +1,14 @@
 package org.nstamato.bansheeremote;
 
-public class Album {
-
-	private String title;
+public class Album extends MusicItem {
 
 	private int albumId;
 
 	public Album(String title, int albumId) {
-		this.title = title;
+		this.name = title;
 		this.albumId = albumId;
 	}
 
-	public String getTitle() {
-		return title;
-	}
-	
 	public int getAlbumId() {
 		return albumId;
 	}

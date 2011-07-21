@@ -1,0 +1,10 @@
+#Mon Jul 18 22:13:23 CEST 2011
+eclipse.preferences.version=1
+org.emonic.base.build.file=BansheeRemotePlugin.build
+org.emonic.base.build.mechanism=ant
+org.emonic.base.codecompletion.dll.dir0=/home/jens/git/BansheeRemote/BansheeRemotePlugin/bin/Debug
+org.emonic.base.codecompletion.total.dll.dir=1
+org.emonic.base.codecompletion.total.dll.file=0
+org.emonic.base.codecompletion.total.src=0
+org.emonic.base.project.copyright=(c) YEAR by AUTHOR\nAll rights reserved.
+org.emonic.base.project.defaultNamespace=Banshee.RemoteListener

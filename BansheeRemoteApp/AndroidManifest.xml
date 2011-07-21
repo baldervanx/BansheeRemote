@@ -24,7 +24,7 @@
     android:versionName="3.0">
     <uses-sdk android:minSdkVersion="4" />
     <application android:icon="@drawable/banshee" android:label="Banshee Remote">
-        <activity android:name=".BansheeRemote" android:label="Banshee Remote" >
+        <activity android:name=".BansheeRemote" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -32,11 +32,11 @@
         </activity>
 		<activity android:name=".Settings" android:label="Banshee Remote" android:configChanges="orientation|keyboardHidden">
 		</activity>
-		<activity android:name=".ArtistBrowse" android:label="Artists" android:configChanges = "orientation|keyboardHidden" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		<activity android:name=".ArtistBrowse" android:configChanges = "orientation|keyboardHidden" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:label="@string/title_artists">
 		</activity>
-		<activity android:name=".AlbumBrowse" android:label="Artists" android:configChanges = "orientation|keyboardHidden" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		<activity android:name=".AlbumBrowse" android:configChanges = "orientation|keyboardHidden" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:label="@string/title_albums">
 		</activity>
-		<activity android:name=".SongBrowse" android:label="Artists" android:configChanges = "orientation|keyboardHidden" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		<activity android:name=".TrackBrowse" android:configChanges = "orientation|keyboardHidden" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:label="@string/title_tracks">
 		</activity>
 		<activity android:name=".NewServer" android:label="Banshee Remote" android:configChanges="orientation|keyboardHidden">
 		</activity>

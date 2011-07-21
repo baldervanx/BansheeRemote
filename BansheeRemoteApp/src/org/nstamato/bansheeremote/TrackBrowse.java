@@ -26,29 +26,35 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
-public class ArtistBrowse extends MusicListActivity<Artist> {
-    
+public class TrackBrowse extends MusicListActivity<Track> {
+    	
 	public void onListItemClick(ListView l, View v, int position, long id) {
     	super.onListItemClick(l, v, position, id);
-    	Artist selected = getItem(position);
-    	Intent i = new Intent(this, AlbumBrowse.class);
-    	i.putExtra("Artist",selected.getName());
-    	startActivityForResult(i,2);
+    	Track selected = getItem(position);
+    	Intent i = new Intent();
+    	i.putExtra("Uri", selected.getUri());
+    	setResult(RESULT_OK, i);
+    	finish();
 	}
 
 	@Override
 	protected int getIconResource() {
-		return R.drawable.artist;
+		return R.drawable.songs;
 	}
 
 	@Override
-	protected List<Artist> getMusicItems(Bundle extras) {
-		return bansheeDB.getArtists();
+	protected List<Track> getMusicItems(Bundle extras) {
+		int albumId = extras != null ? extras.getInt("AlbumID") : 0;
+		return bansheeDB.getTracks(albumId);
 	}
 
 	@Override
 	protected String getTitleText(Bundle extras) {
-		return getResources().getString(R.string.title_artists);
+		String album = extras != null ? extras.getString("Album") : null;
+		if (album == null) {
+			return getResources().getString(R.string.title_tracks);
+		}
+		return album;
 	}
 
 }

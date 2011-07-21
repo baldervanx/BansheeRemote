@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D2CE86D-49B2-4B9D-BF7D-4EDC7C3486F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BansheeRemoteListener</RootNamespace>
+    <AssemblyName>BansheeRemoteListener</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Mono.Posix" />
+    <Reference Include="Banshee.NowPlaying, Version=1.5.0.0, Culture=neutral">
+      <Package>banshee-1-nowplaying</Package>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Mono.Media, Version=1.5.0.0, Culture=neutral">
+      <Package>banshee-1-mono-media</Package>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Banshee.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\usr\lib\banshee-1\Banshee.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Banshee.Services, Version=1.7.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\usr\lib\banshee-1\Banshee.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Hyena, Version=1.7.0.0, Culture=neutral">
+      <Package>banshee-1-hyena</Package>
+    </Reference>
+    <Reference Include="Hyena.Data.Sqlite, Version=1.7.0.0, Culture=neutral">
+      <Package>banshee-1-hyena-data-sqlite</Package>
+    </Reference>
+    <Reference Include="Banshee.Core, Version=1.7.0.0, Culture=neutral">
+      <Package>banshee-1-core</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Banshee.RemoteListener\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banshee.RemoteListener\BansheeRemoteListenerService.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="Banshee.RemoteListener.addin.xml" />
+  </ItemGroup>
+</Project>
